@@ -9,6 +9,9 @@
       </h2>
       <h3>
         <%= total_gross(movie) %>
+        <span class="stars pt-4">
+          <%= render "shared/stars", percent: movie.average_stars_as_percent %>
+        </span>
       </h3>
       <p>
         <%= truncate(movie.description, length: 150, separator: ' ') %>

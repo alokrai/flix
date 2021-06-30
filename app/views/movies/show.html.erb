@@ -6,6 +6,10 @@
     <h1><%= @movie.title %></h1>
     <h2>
       <%= year_of(@movie) %> &bull; <%= @movie.rating %>
+      <div class="reviews">
+        <%= render "shared/stars", percent: @movie.average_stars_as_percent %>
+        <%= link_to 'Reviews', movie_reviews_path(@movie) %>
+      </div>
     </h2>
     <p>
       <%= @movie.description %>
@@ -24,6 +28,8 @@
         <td><%= total_gross(@movie) %></td>
       </tr>
     </table>
+    <%= link_to "Write Review", new_movie_review_path(@movie),
+                class: "review" %>
   </div>
 </section>
 

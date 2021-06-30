@@ -173,3 +173,17 @@ Movie.create!([
                   image_file_name: "wonder-woman.png"
                 }
               ])
+
+Review.create!(
+  [
+    {
+      name: "Larry", stars: 5, comment: "Awesome!", movie_id: 5
+    },
+    {
+      name: "Daisy", stars: 4, comment: "Great!", movie_id: 5
+    },
+    {
+      name: "Moe", stars: 3, comment: "Spilled my popcorn!", movie_id: 5
+    }
+  ]
+)
