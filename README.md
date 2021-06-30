@@ -1,24 +1,12 @@
-# README
+# Flix: Movie Review Web App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Demo
 
-Things you may want to cover:
+## Purpose
 
-* Ruby version
+## Technologies used
+Ruby on Rails 6
 
-* System dependencies
+## Installation instructions
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+License: MIT
