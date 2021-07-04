@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
     @fans = @movie.fans
+    @favorite = current_user.favorite_movies.include?(@movie) if current_user || false
   end
 
   def create

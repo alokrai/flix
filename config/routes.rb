@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :favorites
   root to: 'movies#index'
 
   resources :movies do
     resources :reviews
+    resources :favorites
   end
 
   resources :users
