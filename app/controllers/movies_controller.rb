@@ -11,6 +11,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @fans = @movie.fans
     @favorite = current_user.favorite_movies.include?(@movie) if current_user || false
+    @genres = @movie.genres
   end
 
   def create
@@ -51,6 +52,14 @@ class MoviesController < ApplicationController
 
   def movie_params
     params.require(:movie).
-      permit(:title, :rating, :total_gross, :description, :released_on, :director, :duration, :image_name)
+      permit(:title,
+             :rating,
+             :total_gross,
+             :description,
+             :released_on,
+             :director,
+             :duration,
+             :image_name,
+             genre_ids: [])
   end
 end

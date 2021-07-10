@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :favorites
   end
 
+  resources :genres
+
   resources :users
   get 'signup', to: 'users#new'
 
